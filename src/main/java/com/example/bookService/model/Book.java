@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "books")
-public class Books {
+public class Book {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,12 +19,13 @@ public class Books {
 
 	@Column(name = "published")
 	private boolean published;
-
-	public Tutorial() {
+    
+    // default constructor to create the book object
+	public Book() {
 
 	}
 
-	public Tutorial(String title, String description, boolean published) {
+	public Book(String title, String description, boolean published) {
 		this.title = title;
 		this.description = description;
 		this.published = published;
